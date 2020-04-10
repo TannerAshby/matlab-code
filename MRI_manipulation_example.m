@@ -1,5 +1,6 @@
 %%
-
+clear
+clc
 s = load('mri');
 mriVolume = squeeze(s.D); % removes singleton dimensions
 sizeIn = size(mriVolume);
