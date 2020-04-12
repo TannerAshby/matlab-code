@@ -138,5 +138,18 @@ montage({a,a_imadjust,a_histeq,a_adapthisteq},'Size',[1 4])
 figure(6)
 imshow(a_imadjust) % This is the best way to improve contrast that I have found
 
+b_imadjust = imadjust(b);
+c_imadjust = imadjust(c);
+d_imadjust = imadjust(d);
+
+figure(7)
+imshow(b_imadjust)
+
+figure(8)
+imshow(c_imadjust)
+
+figure(9)
+imshow(d_imadjust)
+
 
 
