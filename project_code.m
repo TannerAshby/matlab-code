@@ -122,3 +122,21 @@ else
     %disp('no tumor');
     return;
 end
+
+%% 4/12/20 Andrew
+
+% trying out different image adjustment techniques to improve contrast
+
+a = dicomread('IM-0001-0001.dcm');
+a_imadjust = imadjust(a);
+a_histeq = histeq(a);
+a_adapthisteq = adapthisteq(a);
+
+figure(5)
+montage({a,a_imadjust,a_histeq,a_adapthisteq},'Size',[1 4])
+
+figure(6)
+imshow(a_imadjust) % This is the best way to improve contrast that I have found
+
+
+
