@@ -151,5 +151,24 @@ imshow(c_imadjust)
 figure(9)
 imshow(d_imadjust)
 
+%% 4/13/20 Tanner
+% This segment of code is purely for displaying the slices on top of each
+% other in 3D
+
+a=imread('1.png');
+b=imread('2.png');
+c=imread('3.png');
+d=imread('4.png');
+
+d=cat(3,a,b,c,d);
+
+figure
+contourslice(d,[],[],[1,2,3,4,27],10);
+view(3)
+axis tight
+
+
+
+
 
 
