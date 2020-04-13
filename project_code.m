@@ -153,3 +153,15 @@ imshow(d_imadjust)
 
 
 
+%% 4/13/20 Tanner 
+a=imread('1.png');
+b=imread('2.png');
+c=imread('3.png');
+d=imread('4.png');
+d = cat(3,a,b,c,d)
+figure
+contourslice(d,[],[],[1,2,3,4,27],10);
+view(3)
+axis tight
+
+% this displays the four slices on top of each other
