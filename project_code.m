@@ -163,6 +163,7 @@ d=imread('4.png');
 D=cat(3,a,b,c,d);
 
 figure
+colormap gray
 contourslice(D,[],[],[1,2,3,4,27],15);
 view(3)
 axis tight
